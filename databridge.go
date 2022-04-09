@@ -90,7 +90,7 @@ func process_poly_json2(json_pipe *NonBlockingChan, master_queue chan TradeMessa
 
 func recv_poly_data2(json_queue *NonBlockingChan, app *App) {
 
-	// COMMENT OUT BELOW FUNCTION CODE FOR IT TO BREAK
+	// COMMENT OUT BELOW FUNCTION CODE TO FIX SIGSEV
 	log.Printf("connecting to %s", "wss://testnet-explorer.binance.org/ws/block")
 	c, _, err := websocket.DefaultDialer.Dial("wss://testnet-explorer.binance.org/ws/block", nil)
 	if err != nil {
